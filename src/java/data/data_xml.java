@@ -188,6 +188,11 @@ public class data_xml extends HttpServlet {
         {
             // Create elements
             Element item = doc.createElement("sorted_item");
+            Text item_value = doc.createTextNode(Integer.toString(value));
+            
+            // Add to xml document
+            item.appendChild(item_value);
+            sorted_elements.appendChild(item);
         }
         
         
